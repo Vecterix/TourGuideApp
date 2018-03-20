@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout>
+
+    <data>
+
+        <variable
+            name="locationitem"
+            type="com.vecterix.android.tourguideapp.Location" />
+    </data>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/list_item"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorAccent"
+        android:layout_marginTop="@dimen/standard_margin_thick"
+        android:layout_marginBottom="@dimen/standard_margin_thick">
+
+        <TextView
+            android:id="@+id/site_name"
+            style="@style/SiteName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_toStartOf="@id/city"
+            tools:ignore="RelativeOverlap"
+            tools:text="Title" />
+
+        <TextView
+            android:id="@+id/city"
+            style="@style/City"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/site_name"
+            android:layout_alignTop="@id/site_name"
+            android:layout_toStartOf="@id/state"
+            tools:text="City" />
+
+        <TextView
+            android:id="@+id/state"
+            style="@style/State"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/site_name"
+            android:layout_alignTop="@id/site_name"
+            tools:text="ST" />
+
+        <ImageView
+            android:id="@+id/location_image_icon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/site_name"
+            android:adjustViewBounds="true"
+            android:contentDescription="@string/location_image_icon_description"
+            tools:src="@drawable/folsom_dam" />
+
+        <TextView
+            android:id="@+id/description"
+            style="@style/Description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/location_image_icon"
+            tools:text="Description" />
+
+    </RelativeLayout>
+
+</layout>

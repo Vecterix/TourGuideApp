@@ -1,0 +1,16 @@
+<resources>
+    <!-- Text Sizes-->
+    <dimen name="medium_text"      >14sp</dimen>
+    <dimen name="large_text"       >18sp</dimen>
+    <dimen name="extra_large_text" >20sp</dimen>
+
+    <!-- Paddings -->
+    <dimen name="no_padding"             > 0dp</dimen>
+    <dimen name="standard_padding_thin"  > 4dp</dimen>
+    <dimen name="standard_padding"       > 8dp</dimen>
+    <dimen name="standard_padding_thick" >16dp</dimen>
+
+    <!-- Margins -->
+    <dimen name="standard_margin_thick" >16dp</dimen>
+
+</resources>

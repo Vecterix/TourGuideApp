@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Tour Guide App</string>
+
+    <string name="location_image_icon_description">Image of location attraction</string>
+</resources>

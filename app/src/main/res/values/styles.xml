@@ -1,0 +1,53 @@
+<resources>
+
+    <!-- Base Application Theme -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+        <item name="windowActionBar"          >false                   </item>
+        <item name="windowNoTitle"            >true                    </item>
+        <item name="colorPrimary"             >@color/colorPrimary     </item>
+        <item name="colorPrimaryDark"         >@color/colorPrimaryDark </item>
+        <item name="colorAccent"              >@color/colorAccent      </item>
+    </style>
+
+    <!-- Base Card TextView Style -->
+    <style name="Card">
+        <item name="android:paddingBottom" >@dimen/standard_padding_thin </item>
+        <item name="android:paddingStart"  >@dimen/standard_padding      </item>
+        <item name="android:paddingEnd"    >@dimen/standard_padding      </item>
+        <item name="android:paddingTop"    >@dimen/standard_padding_thin </item>
+        <item name="android:textColor"     >@color/white                 </item>
+        <item name="android:textStyle"     >bold                         </item>
+    </style>
+
+    <!-- Location Card Site Name TextView Style -->
+    <style name="SiteName" parent="Card">
+        <item name="android:layout_alignParentStart">true                         </item>
+        <item name="android:textSize"              >@dimen/extra_large_text       </item>
+        <item name="android:paddingEnd"            >@dimen/standard_padding_thin  </item>
+    </style>
+
+    <!-- Location Card City TextView Style -->
+    <style name="City" parent="Card">
+        <item name="android:gravity"      >bottom|end                    </item>
+        <item name="android:paddingStart" >@dimen/standard_padding_thick </item>
+        <item name="android:paddingEnd"   >@dimen/standard_padding_thin  </item>
+        <item name="android:textSize"     >@dimen/medium_text            </item>
+        <item name="android:background"   >@color/colorAccent            </item>
+    </style>
+
+    <!-- Location Card State TextView Style -->
+    <style name="State" parent="City">
+        <item name="android:gravity"               >bottom|start       </item>
+        <item name="android:paddingStart"          >@dimen/no_padding  </item>
+        <item name="android:textAllCaps"           >true               </item>
+        <item name="android:layout_alignParentEnd" >true               </item>
+        <item name="android:background"            >@color/colorAccent </item>
+    </style>
+
+    <!-- Location Card Description TextView Style -->
+    <style name="Description" parent="Card">
+        <item name="android:textSize"            >@dimen/large_text            </item>
+        <item name="android:textStyle"           >normal                       </item>
+    </style>
+
+</resources>
