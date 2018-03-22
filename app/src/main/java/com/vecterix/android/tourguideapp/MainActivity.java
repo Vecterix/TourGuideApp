@@ -1,10 +1,10 @@
 package com.vecterix.android.tourguideapp;
 
 import android.databinding.DataBindingUtil;
+import android.os.Bundle;
 import android.support.design.widget.TabLayout;
 import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 
 import com.vecterix.android.tourguideapp.databinding.ActivityMainBinding;
 
@@ -24,7 +24,8 @@ public class MainActivity extends AppCompatActivity {
 
         ViewPager viewPager = binding.viewpager;
 
-        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter(getSupportFragmentManager());
+        SimpleFragmentPagerAdapter adapter = new SimpleFragmentPagerAdapter
+                (this, getSupportFragmentManager());
 
         viewPager.setAdapter(adapter);
 
@@ -39,57 +40,63 @@ public class MainActivity extends AppCompatActivity {
     private void PopulateLocations() {
         ArrayList<String> descriptions = getDescriptions();
 
-        locations.add(new Location("Folsom Dam","Folsom" ,"CA", R.drawable.folsom_dam,
-                descriptions.get(0)));
-        locations.add(new Location("Folsom Prison","Folsom" ,"CA", R.drawable.folsom_prison,
-                descriptions.get(1)));
-        locations.add(new Location("Folsom Lake","Folsom" ,"CA", R.drawable.folsom_lake, descriptions
-                .get(2)));
-        locations.add(new Location("Palladio Outlets","Folsom" ,"CA", R.drawable.palladio_outlets,
-                descriptions.get(3)));
-        locations.add(new Location("Negro Bar Picnic Area","Folsom" ,"CA", R.drawable.negro_bar_picnic_area,
-                descriptions.get(4)));
-        locations.add(new Location("Lake Natoma","Folsom" ,"CA", R.drawable.lake_natoma,
-                descriptions.get(5)));
+        locations.add(new Location(getString(R.string.folsom_dam), getString(R.string.folsom),
+                getString(R.string.ca), R.drawable.folsom_dam, descriptions.get(0)));
+        locations.add(new Location(getString(R.string.folsom_prison), getString(R.string.folsom),
+                getString(R.string.ca), R.drawable.folsom_prison, descriptions.get(1)));
+        locations.add(new Location(getString(R.string.folsom_lake), getString(R.string.folsom),
+                getString(R.string.ca), R.drawable.folsom_lake, descriptions.get(2)));
+        locations.add(new Location(getString(R.string.palladio_outlets), getString(R.string
+                .folsom), getString(R.string.ca), R.drawable.palladio_outlets, descriptions.get(3)));
+        locations.add(new Location(getString(R.string.negro_bar_picnic_area), getString(R.string
+                .folsom), getString(R.string.ca), R.drawable.negro_bar_picnic_area, descriptions.get(4)));
+        locations.add(new Location(getString(R.string.lake_natoma), getString(R.string.folsom),
+                getString(R.string.ca), R.drawable.lake_natoma, descriptions.get(5)));
 
-        locations.add(new Location("Willow Lake","Prescott" ,"AZ", R.drawable.willow_lake, descriptions
-                .get(6)));
-        locations.add(new Location("Granite Dells","Prescott" ,"AZ", R.drawable.granite_dells,
-                descriptions.get(7)));
-        locations.add(new Location("Peavine Trail","Prescott" ,"AZ", R.drawable.peavine_trail,
-                descriptions.get(8)));
-        locations.add(new Location("Granite Mountain","Prescott" ,"AZ", R.drawable.granite_mountain,
-                descriptions.get(9)));
-        locations.add(new Location("Whiskey Row","Prescott" ,"AZ", R.drawable.whiskey_row, descriptions
-                .get(10)));
-        locations.add(new Location("Lynx Lake","Prescott" ,"AZ", R.drawable.lynx_lake, descriptions
-                .get(11)));
+        locations.add(new Location(getString(R.string.willow_lake), getString(R.string.prescott),
+                getString(R.string.az), R.drawable.willow_lake, descriptions.get(6)));
+        locations.add(new Location(getString(R.string.granite_dells), getString(R.string.prescott),
+                getString(R.string.az), R.drawable.granite_dells, descriptions.get(7)));
+        locations.add(new Location(getString(R.string.peavine_trail), getString(R.string.prescott),
+                getString(R.string.az), R.drawable.peavine_trail, descriptions.get(8)));
+        locations.add(new Location(getString(R.string.granite_mountain), getString(R.string
+                .prescott), getString(R.string.az), R.drawable.granite_mountain, descriptions.get(9)));
+        locations.add(new Location(getString(R.string.whiskey_row), getString(R.string.prescott),
+                getString(R.string.az), R.drawable.whiskey_row, descriptions.get(10)));
+        locations.add(new Location(getString(R.string.lynx_lake), getString(R.string.prescott),
+                getString(R.string.az), R.drawable.lynx_lake, descriptions.get(11)));
 
-        locations.add(new Location("Lake Pleasant","Phoenix" ,"AZ", R.drawable.lake_pleasant,
-                descriptions.get(12)));
-        locations.add(new Location("McDowell Mountain Regional Park","Phoenix" ,"AZ", R
-                .drawable.mcdowell_mountain_regional_park, descriptions.get(13)));
-        locations.add(new Location("Estrella Mountain Regional Park","Phoenix" ,"AZ", R
-                .drawable.estrella_mountain_regional_park, descriptions.get(14)));
-        locations.add(new Location("Adobe Dam Regional Park","Phoenix" ,"AZ", R.drawable.adobe_dam_regional_park,
+        locations.add(new Location(getString(R.string.lake_pleasant), getString(R.string.phoenix),
+                getString(R.string.az), R.drawable.lake_pleasant, descriptions.get(12)));
+        locations.add(new Location(getString(R.string.mcdowell_mountain_regional_park), getString
+                (R.string.phoenix), getString(R.string.az),
+                R.drawable.mcdowell_mountain_regional_park, descriptions.get(13)));
+        locations.add(new Location(getString(R.string.estrella_mountain_regional_park), getString
+                (R.string.phoenix), getString(R.string.az),
+                R.drawable.estrella_mountain_regional_park, descriptions.get(14)));
+        locations.add(new Location(getString(R.string.adobe_dam_regional_park), getString(R.string
+                .phoenix), getString(R.string.az), R.drawable.adobe_dam_regional_park,
                 descriptions.get(15)));
-        locations.add(new Location("Downtown Tempe","Phoenix" ,"AZ", R.drawable.downtown_tempe,
-                descriptions.get(16)));
-        locations.add(new Location("Southern Scottsdale","Phoenix" ,"AZ", R.drawable.southern_scottsdale,
+        locations.add(new Location(getString(R.string.downtown_tempe), getString(R.string.phoenix),
+                getString(R.string.az), R.drawable.downtown_tempe, descriptions.get(16)));
+        locations.add(new Location(getString(R.string.southern_scottsdale), getString(R.string
+                .phoenix), getString(R.string.az), R.drawable.southern_scottsdale,
                 descriptions.get(17)));
 
-        locations.add(new Location("Mount Rose","Reno" ,"NV", R.drawable.mount_rose, descriptions.get
-                (18)));
-        locations.add(new Location("Mount Rose Ski Resort","Reno" ,"NV", R.drawable.mount_rose_ski_resort,
+        locations.add(new Location(getString(R.string.mount_rose), getString(R.string.reno),
+                getString(R.string.nv), R.drawable.mount_rose, descriptions.get(18)));
+        locations.add(new Location(getString(R.string.mount_rose_ski_resort), getString(R.string
+                .reno), getString(R.string.nv), R.drawable.mount_rose_ski_resort,
                 descriptions.get(19)));
-        locations.add(new Location("National Automobile Museum","Reno" ,"NV", R.drawable.national_automobile_museum,
+        locations.add(new Location(getString(R.string.national_automobile_museum), getString(R
+                .string.reno), getString(R.string.nv), R.drawable.national_automobile_museum,
                 descriptions.get(20)));
-        locations.add(new Location("Idlewild Park","Reno" ,"NV", R.drawable.idlewild_park, descriptions
-                .get(21)));
-        locations.add(new Location("Circus Circus Reno","Reno" ,"NV", R.drawable.circus_circus_reno,
-                descriptions.get(22)));
-        locations.add(new Location("Nevada Museum of Art","Reno" ,"NV", R.drawable.nevada_museum_of_art,
-                descriptions.get(23)));
+        locations.add(new Location(getString(R.string.idlewild_park), getString(R.string.reno),
+                getString(R.string.nv), R.drawable.idlewild_park, descriptions.get(21)));
+        locations.add(new Location(getString(R.string.circus_circus_reno), getString(R.string.reno),
+                getString(R.string.nv), R.drawable.circus_circus_reno, descriptions.get(22)));
+        locations.add(new Location(getString(R.string.nevada_museum_of_art), getString(R.string.reno)
+                , getString(R.string.nv), R.drawable.nevada_museum_of_art, descriptions.get(23)));
     }
 
     static ArrayList<Location> GetLocations(String city) {
@@ -109,35 +116,31 @@ public class MainActivity extends AppCompatActivity {
 
         ArrayList<String> descriptions = new ArrayList<>();
 
-        descriptions.add("Completed in 1955, Folsom Dam became an icon of the northeast " +
-                "Sacramento area. Easily seen from the recently completed Folsom Lake Crossing " +
-                "bridge, it towers at 340ft, generating an annual energy capacity of 691TWh.");
-        descriptions.add("One of 33 state prisons in California, it was immortalized in 1955 " +
-                "after Johnny Cash's release of Folsom Prison Blues.");
-        descriptions.add("Man-made reservoir on the American River, it holds 11,500 acre-ft of " +
-                "water. Folsom Lake State Recreation Area permits hiking, camping, motorboating, " +
-                "fishing, and many other activities");
-        descriptions.add("This is where a description of the Palladio Outlets would go");
-        descriptions.add("This is where a description of the Negro Bar Picnic Area would go");
-        descriptions.add("This is where a description of Lake Natoma would go");
-        descriptions.add("This is where a description of Willow Lake would go");
-        descriptions.add("This is where a description of the Granite Dells would go");
-        descriptions.add("This is where a description of the Peavine Trail would go");
-        descriptions.add("This is where a description of Granite Mountain would go");
-        descriptions.add("This is where a description of Whiskey Row would go");
-        descriptions.add("This is where a description of the Lynx Lake would go");
-        descriptions.add("This is where a description of Mount Rose would go");
-        descriptions.add("This is where a description of the Mount Rose Ski Resort would go");
-        descriptions.add("This is where a description of the National Automobile Museum would go");
-        descriptions.add("This is where a description of IdleWild Park would go");
-        descriptions.add("This is where a description of Circus Circus Reno would go");
-        descriptions.add("This is where a description of the Nevada Museum of Art would go");
-        descriptions.add("This is where a description of Lake Pleasant would go");
-        descriptions.add("This is where a description of McDowell Mountain Regional Park would go");
-        descriptions.add("This is where a description of Estrella Mountain Regional Park would go");
-        descriptions.add("This is where a description of Adobe Dam Regional Park would go");
-        descriptions.add("This is where a description of Downtown Tempe would go");
-        descriptions.add("This is where a description of Southern Scottsdale would go");
+        descriptions.add(getString(R.string.folsom_dam_description));
+        descriptions.add(getString(R.string.folsom_prison_description));
+        descriptions.add(getString(R.string.folsom_lake_description));
+        descriptions.add(getString(R.string.palladio_outlets_decription));
+        descriptions.add(getString(R.string.negro_bar_picnic_area_description));
+        descriptions.add(getString(R.string.lake_natoma_description));
+        descriptions.add(getString(R.string.willow_lake_description));
+        descriptions.add(getString(R.string.granite_dells_description));
+        descriptions.add(getString(R.string.peavine_trail_description));
+        descriptions.add(getString(R.string.granite_mountain_description));
+        descriptions.add(getString(R.string.whiskey_row_description));
+        descriptions.add(getString(R.string.lynx_lake_description));
+        descriptions.add(getString(R.string.lake_pleasant_description));
+        descriptions.add(getString(R.string.mcdowell_mountain_regional_park_description));
+        descriptions.add(getString(R.string.estrella_mountain_regional_park_description));
+        descriptions.add(getString(R.string.adobe_dam_regional_park_description));
+        descriptions.add(getString(R.string.downtown_tempe_description));
+        descriptions.add(getString(R.string.southern_scottsdale_description));
+        descriptions.add(getString(R.string.mount_rose_description));
+        descriptions.add(getString(R.string.mount_rose_ski_resort_description));
+        descriptions.add(getString(R.string.national_automobile_museum_description));
+        descriptions.add(getString(R.string.idlewild_park_description));
+        descriptions.add(getString(R.string.circus_circus_reno_description));
+        descriptions.add(getString(R.string.nevada_museum_of_art_description));
+
         return descriptions;
     }
 }

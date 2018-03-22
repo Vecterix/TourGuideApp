@@ -23,7 +23,7 @@ public class LocationFragment extends Fragment {
         Bundle arguments = getArguments();
 
         assert arguments != null;
-        String city = arguments.getString("LOCATION");
+        String city = arguments.getString(getString(R.string.location_key));
 
         ListContainerBinding binding;
 

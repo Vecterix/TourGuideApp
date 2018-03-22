@@ -13,7 +13,7 @@
         android:paddingLeft="@dimen/standard_padding_thick"
         android:paddingRight="@dimen/standard_padding_thick"
         android:paddingStart="@dimen/standard_padding_thick"
-        android:paddingEnd="@dimen/standard_padding_thick">
+        android:paddingEnd="@dimen/standard_padding_thick"/>
 
-    </ListView>
+
 </layout>
